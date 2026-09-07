@@ -50,3 +50,37 @@ Download or clone the repository to your local machine.
 Run the following command in your terminal to install the required libraries:
 ```bash
 pip install -r requirements.txt
+```
+
+### 3. Environment Variables
+1. Find the `.env.example` file included in the root directory.
+2. Rename it to `.env`.
+3. Open it and paste your Discord Bot Token:
+```env
+DISCORD_TOKEN="YOUR_BOT_TOKEN_HERE"
+```
+
+### 4. Run the Bot
+Start the bot engine by running:
+```bash
+python app.py
+```
+*Note: The bot will automatically generate `profile.db` (the SQLite database) upon first boot.*
+
+---
+
+## ⚙️ Initial Discord Setup
+
+Because OmniBot is built to be modular, it remains dormant when first added to a server. To turn features on, an Administrator must run the setup commands in Discord:
+
+1. Use `/setup toggle-feature` to turn on the Reputation and Social modules.
+2. Use `/setup set-role` to map your server's specific roles (e.g., Verified, Staff, Ping roles).
+3. Use `/setup set-channel` to map your Logging and Verification channels.
+4. Use `/setup-rep role` to bind your specific server roles to the Reputation Rank ladder.
+
+Run `/setup-help` at any time for a full administrative command directory!
+
+---
+
+## 📜 License
+This project is open-source and available under the [MIT License](LICENSE). Feel free to fork, modify, and host your own instances!
